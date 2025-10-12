@@ -1,0 +1,294 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Faizan Zahoor | WordPress Developer</title>
+  <style>
+      
+    
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      background: linear-gradient(135deg, #0073aa, #00a8cc);
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      transition: 0.3s;
+      animation: slideDown 1.2s ease;
+      cursor: pointer;
+    }
+
+    header h1:hover {
+      color: #fff;
+      text-shadow: 0 0 20px #00ffff, 0 0 30px #00a8cc;
+      transform: scale(1.05);
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #e0e0e0;
+      animation: fadeIn 2s ease;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: riseUp 0.8s ease forwards;
+    }
+
+    section:nth-child(1) { animation-delay: 0.3s; }
+    section:nth-child(2) { animation-delay: 0.5s; }
+    section:nth-child(3) { animation-delay: 0.7s; }
+    section:nth-child(4) { animation-delay: 0.9s; }
+    section:nth-child(5) { animation-delay: 1.1s; }
+
+    @keyframes riseUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    section h2 {
+      color: #0073aa;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      border-left: 5px solid #0073aa;
+      padding-left: 10px;
+      transition: 0.3s;
+    }
+
+    section h2:hover {
+      color: #00a8cc;
+      letter-spacing: 1px;
+    }
+
+    .about p {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .info p {
+      margin-bottom: 8px;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .skill {
+      background: #0073aa;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      background: #00a8cc;
+      transform: scale(1.05);
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 5px solid #0073aa;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      background: #e8f8ff;
+      transform: scale(1.02);
+    }
+
+    .project-card h3 {
+      color: #0073aa;
+      margin-bottom: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0073aa;
+      box-shadow: 0 0 5px #0073aa;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      background: #0073aa;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #005f88;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 0.9rem;
+      animation: fadeIn 2s ease;
+    }
+
+    a {
+      color: #0073aa;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .message-box {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 5px solid #00a8cc;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .message-box:hover {
+      background: #e6faff;
+      transform: scale(1.02);
+    }
+
+    .message-box h3 {
+      color: #0073aa;
+      margin-bottom: 10px;
+    }
+
+    .message-box p {
+      color: #333;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Faizan Zahoor</h1>
+    <p>Beginner WordPress Developer | Passionate About Web Design</p>
+  </header>
+
+  <div class="container">
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hello! I’m <strong>Faizan Zahoor</strong>, a beginner <strong>WordPress Developer</strong> with 2–3 months of practical experience. I create clean, responsive, and user-friendly WordPress websites for personal and business use. My goal is to master advanced WordPress development and become a top-level freelancer.</p>
+
+      <div class="info">
+        <p><strong>Phone:</strong> 6006958696</p>
+        <p><strong>Email 1:</strong> faizan.zahoor154@gmail.com</p>
+        <p><strong>Email 2:</strong> faizanzahoor2211@gmail.com</p>
+        <p><strong>LinkedIn:</strong> <a href="#" target="_blank">Add Your LinkedIn Profile Link Here</a></p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">WordPress</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">Elementor</div>
+        <div class="skill">Responsive Design</div>
+        <div class="skill">Basic SEO</div>
+        <div class="skill">Canva</div>
+        <div class="skill">Website Maintenance</div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>Personal Blog Website</h3>
+        <p>Developed a personal blog using WordPress with a responsive layout and SEO optimization for better user engagement.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Business Landing Page</h3>
+        <p>Created a professional landing page using Elementor, designed for small businesses with modern UI and mobile-friendly design.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Prototype</h3>
+        <p>Built a simple, professional portfolio structure showcasing work and contact information using WordPress and CSS customization.</p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <form action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholde
